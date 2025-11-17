@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💾 y2k5-css: The 2005 Web Revival
 
 > "The visual style of the web in 2005 is back, baby!"
@@ -26,3 +27,7 @@ Install the package using npm:
 ```bash
 npm install y2k5-css
 ```
+=======
+# y2k5-css
+y2k5-css is a lightweight CSS framework that meticulously recreates the authentic aesthetic of the web around 2005, capturing the essence of the Windows XP era, early Web 2.0, and the peak of personal websites.
+>>>>>>> 279d19c87da924f1d988c9e99648aa394edd0812

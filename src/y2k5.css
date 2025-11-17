@@ -1,0 +1,297 @@
+/* ================================================================
+   Y2K CSS – O visual da web em 2005 está de volta, bebê!
+   Gradientes azul XP, bordas 1px, Verdana 11px, GIFs animados…
+   ================================================================ */
+
+:root {
+  --primary-color: #0e6ba8; /* Azul clássico do Windows XP / MSN / Geocities */
+  --primary-darker: #005a8c;
+  --primary-darkest: #003d66;
+  --success: #7da54e;
+  --danger: #d84a38;
+  --font-main: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.y2k *,
+.y2k *::before,
+.y2k *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.y2k {
+  font-family: var(--font-main);
+  font-size: 11px;
+  line-height: 1.4;
+  background: #e5e5e5
+    url("data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==")
+    repeat;
+  color: #000;
+}
+
+/* Temas rápidos (basta adicionar a classe no elemento raiz) */
+.y2k.theme-pink {
+  --primary-color: #d8488c;
+  --primary-darker: #b82b6f;
+  --primary-darkest: #9c1853;
+}
+.y2k.theme-lime {
+  --primary-color: #a0b723;
+  --primary-darker: #82901a;
+  --primary-darkest: #647014;
+}
+.y2k.theme-orange {
+  --primary-color: #ff6600;
+  --primary-darker: #cc5200;
+  --primary-darkest: #b34700;
+}
+.y2k.theme-purple {
+  --primary-color: #8b4789;
+  --primary-darker: #6b3369;
+  --primary-darkest: #4b2349;
+}
+
+/* Layout */
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container-fluid {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Grid com table (porque em 2005 era assim que se fazia) */
+.row {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.col {
+  display: table-cell;
+  padding: 5px;
+  vertical-align: top;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* Painéis / Caixas */
+.panel {
+  background: #fff;
+  border: 1px solid #666;
+  margin-bottom: 10px;
+}
+.panel-header {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-darker)
+  );
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--primary-darker);
+}
+.panel-body {
+  padding: 10px;
+  background: #f8f8f8;
+}
+.panel-footer {
+  background: #e5e5e5;
+  padding: 5px 10px;
+  border-top: 1px solid #ccc;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* Tabelas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #666;
+  margin-bottom: 10px;
+}
+.table th {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-darker)
+  );
+  color: #fff;
+  padding: 5px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid var(--primary-darker);
+}
+.table td {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.table-striped tbody tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-main);
+  font-size: 11px;
+  border: 1px solid #666;
+  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
+}
+.btn-primary {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-darker)
+  );
+  color: #fff;
+  border-color: var(--primary-darker);
+}
+.btn-primary:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-darker),
+    var(--primary-darkest)
+  );
+}
+
+/* Forms – foco amarelo XP style */
+.form-group {
+  margin-bottom: 10px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+.form-control {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #666;
+  background: #fff;
+  font-family: var(--font-main);
+  font-size: 11px;
+}
+.form-control:focus {
+  outline: none !important;
+  border: 1px dotted #000 !important;
+  background: #ffff99 !important;
+}
+
+/* Alerts, Nav, Badges, etc (mantidos, mas com nomes genéricos) */
+.alert {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+.alert-info {
+  background: #d9edf7;
+  border-color: var(--primary-color);
+  color: #31708f;
+}
+.alert-success {
+  background: #dff0d8;
+  border-color: #5f8232;
+  color: #3c763d;
+}
+.alert-warning {
+  background: #fcf8e3;
+  border-color: #c09853;
+  color: #8a6d3b;
+}
+.alert-danger {
+  background: #f2dede;
+  border-color: #b33a29;
+  color: #a94442;
+}
+
+.nav {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-darker)
+  );
+  border: 1px solid var(--primary-darker);
+  margin-bottom: 10px;
+}
+.nav-item {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #fff;
+  border-right: 1px solid var(--primary-darker);
+  cursor: pointer;
+}
+.nav-item:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.nav-item.active {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 5px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  border: 1px solid #b33a29;
+}
+.badge-primary {
+  background: var(--primary-darker);
+  border-color: var(--primary-darkest);
+}
+
+/* Utilitários Y2K */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: #666;
+}
+a {
+  color: var(--primary-darker);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--primary-darkest);
+}
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}

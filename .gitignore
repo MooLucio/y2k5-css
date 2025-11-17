@@ -1,0 +1,25 @@
+# Node / npm
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log*
+.pnpm-debug.log*
+
+# Build / distribuição (já vai pro npm, não precisa no GitHub)
+dist/
+
+# Arquivos de lock (opcional – muita gente prefere versionar, mas eu recomendo deixar fora)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Editor / sistema
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Variáveis de ambiente
+.env
+.env.local
